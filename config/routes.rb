@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  root 'recipes#index'
   resources :recipe_foods
   resources :recipes
-  root 'recipes#index'
   resources :foods
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
