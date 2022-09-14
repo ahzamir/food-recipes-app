@@ -11,18 +11,13 @@
 
   <body>
     <header>
-    <h1>
-    RecipeApp
-    </h1>
-    <a href="#">
-    Sign in
-    </a>
-    <a href="#">
-    Sign up
-    </a>
-    <a href="#">
-    Login
-    </a>
+      <h1>RecipeApp</h1>
+      <nav>
+        <%= link_to "Home", root_path %>
+        <%= link_to "Sign Up", new_user_registration_path %>
+        <%= link_to "Log In", new_user_session_path %>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      </nav>
     </header>
         <% if notice %>
   <p class="alert alert-success"><%= notice %></p>

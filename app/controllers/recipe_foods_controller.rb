@@ -3,7 +3,8 @@ class RecipeFoodsController < ApplicationController
 
   # GET /recipe_foods or /recipe_foods.json
   def index
-    @recipe_foods = RecipeFood.all
+    @user = current_user
+    @recipes = @user.recipes.includes(:user).order(created_at: :desc)
   end
 
   # GET /recipe_foods/1 or /recipe_foods/1.json
@@ -19,11 +20,11 @@ class RecipeFoodsController < ApplicationController
 
   # POST /recipe_foods or /recipe_foods.json
   def create
-    @recipe_food = RecipeFood.new(recipe_food_params)
+    @recipe_food = Recipe.find(params[:recipe_id]).recipe_foods.build(recipe_food_params)
 
     respond_to do |format|
       if @recipe_food.save
-        format.html { redirect_to recipe_food_url(@recipe_food), notice: 'Recipe food was successfully created.' }
+        format.html { redirect_to recipe_path(@recipe), notice: 'Recipe food was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_food }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -50,7 +51,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food.destroy
 
     respond_to do |format|
-      format.html { redirect_to recipe_foods_url, notice: 'Recipe food was successfully destroyed.' }
+      format.html { redirect_to recipe_path, notice: 'Recipe food was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -59,11 +60,11 @@ class RecipeFoodsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_recipe_food
-    @recipe_food = RecipeFood.find(params[:id])
+    @recipe_food = RecipeFood.find(params[:recipe_food_id])
   end
 
   # Only allow a list of trusted parameters through.
   def recipe_food_params
-    params.fetch(:recipe_food, {})
+    params.fetch(:recipe_food).permit(:quantity, :food_id)
   end
 end
