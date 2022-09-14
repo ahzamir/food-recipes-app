@@ -1,18 +1,17 @@
-<%= stylesheet_link_tag 'recipe-show.css' %>
+<%= stylesheet_link_tag 'recipe_show.css' %>
 
 <p style="color: green"><%= notice %></p>
 
 <%= render @recipe %>
 
 <div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  <%= link_to "Edit this recipe",edit_user_recipe_path(current_user.id , @recipe) %> |
+  <%= link_to "Back to recipes", recipes_index_path %>
+  <%= button_to "Destroy this recipe", recipes_index_path, method: :delete %>
 </div>
-<%= link_to "Add Ingredient", new_recipe_recipe_food_path(recipe_id: @recipe.id) %>
+<%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
 <hr>
-<%= render @recipe_foods %>
+<div id="recipe_foods">
 <table>
     <th>
       <p>
