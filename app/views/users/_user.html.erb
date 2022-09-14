@@ -1,2 +1,18 @@
 <div id="<%= dom_id user %>">
+    <h1><%= user.name %></h1>
+    <p>
+        <strong>Foods:</strong>
+        <%= user.foods.count %>
+    </p>
+    <p>
+        <strong>Created at:</strong>
+        <%= user.created_at %>
+    </p>
+    <p>
+        <strong>Updated at:</strong>
+        <%= user.updated_at %>
+    </p>
+    <p>
+        <%= link_to "Back", users_path %>
+    </p>
 </div>
