@@ -2,56 +2,54 @@
 
 <p style="color: green"><%= notice %></p>
 
-<h1>Foods</h1>
-<p class="add-food-btn">
-<%= link_to "Add food", new_food_path %>
-</p>
+<h2>Foods</h2>
 
 <div id="foods">
-<table>
+  <table>
     <th>
       <p>
-      <strong>Name</strong>
+        <strong>Name</strong>
       </p>
     </th>
     <th>
       <p>
-    <strong>Measurement unit</strong>
+        <strong>Measurement unit</strong>
       </p>
     </th>
     <th>
       <p>
-      <strong>Price</strong>
+        <strong>Price</strong>
       </p>
     </th>
     <th>
       <p>
-      <strong>Quantity</strong>
+       <strong>Quantity</strong>
       </p>
     </th>
     <th>
       <p>
-      <strong>Actions</strong>
+        <strong>Actions</strong>
       </p>
     </th>
-  <% @foods.each do |food| %>
-     <tr>
-      <td>
-      <%= food.name %>
-      </td>
-      <td>
-      <%= food.measurement_unit %>
-      </td>
-      <td>
-      <%= food.price %>
-      </td>
-      <td>
-      <%= food.quantity %>
-      </td>
-      <td>
-      <%= button_to "Delete", food, method: :delete %>
-      </td>
+    <% @foods.each do |food| %>
+      <tr>
+        <td>
+          <%= food.name %>
+        </td>
+        <td>
+          <%= food.measurement_unit %>
+        </td>
+        <td>
+          <%= food.price %>
+        </td>
+        <td>
+          <%= food.quantity %>
+        </td>
+        <td>
+          <%= button_to "Delete", food, method: :delete %>
+        </td>
       </tr>
-  <% end %>
-    </table>
+    <% end %>
+  </table>
+  <button><%= link_to "Add food", new_food_path %></button>
 </div>

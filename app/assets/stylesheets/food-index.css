@@ -7,24 +7,13 @@ table {
 
 td,
 th {
-  border: 1px solid rgb(157, 157, 157);
+  border: 1px solid rgb(172, 226, 186);
+  border-radius: 10px;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #ddd;
-}
-
-.add-food-btn {
-  display: flex;
-  justify-content: right;
-}
-
-.add-food-btn>* {
-  text-decoration: none;
-  font-size: 26px;
-  color: white;
-  background-color: #e94560;
-  padding: 10px;
+  background-color: #02272e70;
+  color: #fff;
 }

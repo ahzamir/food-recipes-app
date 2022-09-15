@@ -14,8 +14,14 @@
  *= require_self
  */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #03343e;
+  background-color: #03404c;
   color: #fff;
 }
 
@@ -28,38 +34,62 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  background-color: #02272e;
   gap: 120px;
   padding: 30px;
+  border-bottom: 1px solid rgb(172, 226, 186);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 10px 0px rgb(172, 226, 186)
 }
 
 .logo {
-  font-size: 30px;
-  color: rgb(172, 226, 186);
+  font-size: 2rem;
+  color: #fff;
   margin-left: 9px;
+  font-weight: bold;
 }
 
 .elements {
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  gap: 20px;
+  gap: 1rem;
   margin-top: 2px;
 }
 
 button {
   background-color: white;
   padding: 8px;
-  border: none;
+  border: 3px solid rgb(172, 226, 186);
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #056679;
-  color: white;
+  background-color: rgb(172, 226, 186);
 }
 
 .decoration {
   text-decoration: none;
   color: black;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+a:hover {
+  border: 1px solid rgb(172, 226, 186);
+  border-radius: 5px;
 }
