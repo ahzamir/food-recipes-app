@@ -19,6 +19,11 @@ body {
   color: #fff;
 }
 
+.main-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;
