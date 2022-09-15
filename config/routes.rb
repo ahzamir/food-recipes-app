@@ -10,6 +10,6 @@ Rails.application.routes.draw do
       resources :recipe_foods
     end
   end
-
+  resources :shopping_list
   resources :foods, except: :update
 end
