@@ -1,65 +1,57 @@
 <%= stylesheet_link_tag "food-index.css" %>
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Foods</h1>
-
-<%= link_to "New Food", new_food_path %>
+<p class="add-food-btn">
+<%= link_to "Add food", new_food_path %>
+</p>
 
 <div id="foods">
-  <table>
+<table>
     <th>
       <p>
-        <strong>Name</strong>
+      <strong>Name</strong>
       </p>
     </th>
     <th>
       <p>
-        <strong>Measurement_unit</strong>
+    <strong>Measurement unit</strong>
       </p>
     </th>
     <th>
       <p>
-        <strong>Price</strong>
+      <strong>Price</strong>
       </p>
     </th>
     <th>
       <p>
-        <strong>Quantity</strong>
+      <strong>Quantity</strong>
       </p>
     </th>
     <th>
       <p>
-        <strong>Action</strong>
+      <strong>Actions</strong>
       </p>
     </th>
-    <% @foods.each do |food| %>
-      <tr>
-        <td>
-          <p>
-            <%= food.name %>
-          </p>
-        </td>
-        <td>
-          <p>
-            <%= food.measurement_unit %>
-          </p>
-        </td>
-        <td>
-          <p>
-            <%= food.price %>
-          </p>
-        </td>
-        <td>
-          <p>
-            <%= food.quantity %>
-          </p>
-        </td>
-        <td>
-          <p>
-            <%= button_to "Delete", food, method: :delete, data: { confirm: "Are you sure?" } %>
-          </p>
-        </td>
+  <% @foods.each do |food| %>
+     <tr>
+      <td>
+      <%= food.name %>
+      </td>
+      <td>
+      <%= food.measurement_unit %>
+      </td>
+      <td>
+      <%= food.price %>
+      </td>
+      <td>
+      <%= food.quantity %>
+      </td>
+      <td>
+      <%= button_to "Delete", food, method: :delete %>
+      </td>
       </tr>
-    <% end %>
-  </table>
+  <% end %>
+    </table>
 </div>
