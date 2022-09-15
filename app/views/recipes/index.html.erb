@@ -1,15 +1,15 @@
-<%= stylesheet_link_tag "recipes-index.css" %>
+<%= stylesheet_link_tag "recipes_index.css" %>
 
-<h1><%= @user.name %>'s Recipes List</h1>
+<h1><%=@user.name %> Recipes List</h1>
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
-    <p>
-      Recipe Name: <%= recipe.name %>
-    </p>
-    <p>
-      Recipe Description: <%= recipe.description %>
-    </p>
+    <div class="recipes-container">
+    <div class="recipes-card">
+    <p class="recipes-title"><%= link_to recipe.name ,user_recipe_url(@user,recipe) %></p>
+    <p class="recipes-description"><%= recipe.description %></p>
+    </div>
+    </div>
   <% end %>
 </div>
 
