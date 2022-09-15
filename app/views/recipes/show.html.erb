@@ -1,12 +1,13 @@
+<%= stylesheet_link_tag "recipe_show.css" %>
 
 <p style="color: green"><%= notice %></p>
 
 <%= render @recipe %>
 
 <div class="recipe-detail-menu">
-<%= button_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
-<%= button_to "Generate Shopping List", shopping_list_index_path%>
-<%= button_to "Delete This Recipe", recipes_index_path, method: :delete %>
+<%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
+<%= link_to "Generate Shopping List", shopping_list_index_path%>
+<%= link_to "Delete This Recipe", recipes_index_path, method: :delete %>
 </div>
 <hr>
 <div id="recipe_foods">
@@ -50,3 +51,5 @@
   <% end %>
   </table>
 </div>
+Footer
+© 2022 GitHub, Inc.
