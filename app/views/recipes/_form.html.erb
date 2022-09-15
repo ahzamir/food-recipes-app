@@ -37,11 +37,6 @@
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.select :user_id, User.all.collect {|u| [u.name, u.id]} %>
-  </div>
-
-  <div>
     <%= form.submit %>
   </div>
 <% end %>
