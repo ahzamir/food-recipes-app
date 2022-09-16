@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe Recipe, type: :model do
   before :each do
     @user = User.create(name: 'John Doe', email: 'johndoe@gmail.com', password: 123_456, password_confirmation: 123_456)
