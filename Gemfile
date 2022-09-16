@@ -79,5 +79,3 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'jwt', '~> 2.4'
-
-gem 'ffi'

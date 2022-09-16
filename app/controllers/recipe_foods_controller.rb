@@ -4,6 +4,7 @@ class RecipeFoodsController < ApplicationController
   # GET /recipe_foods or /recipe_foods.json
   def index
     @recipe_foods = RecipeFood.all
+    @recipe = Recipe.find(params[:recipe_id])
   end
 
   # GET /recipe_foods/1 or /recipe_foods/1.json

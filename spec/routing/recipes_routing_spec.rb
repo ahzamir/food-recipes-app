@@ -1,37 +1,35 @@
 require 'rails_helper'
 
 RSpec.describe RecipesController, type: :routing do
+
+  before(:each) do
+    @user = User.create!(name: 'John Doe', email: 'example@gmail.com', password: 'password')
+    @recipe = Recipe.create!(name: 'Recipe 1', preparation_time: '00:00:00', cooking_time: '00:00:00', description: 'Description 1', public: true, user_id: @user.id)
+  end
+
   describe 'routing' do
     it 'routes to #index' do
-      expect(get: '/recipes').to route_to('recipes#index')
+      expect(get: "#{user_recipes_path(@user)}").to route_to('recipes#index', user_id: @user.id.to_s)
     end
 
     it 'routes to #new' do
-      expect(get: '/recipes/new').to route_to('recipes#new')
+      expect(get: "#{new_user_recipe_path(@user)}").to route_to('recipes#new', user_id: @user.id.to_s)
     end
 
     it 'routes to #show' do
-      expect(get: '/recipes/1').to route_to('recipes#show', id: '1')
+      expect(get: "#{user_recipe_path(@user, @recipe)}").to route_to('recipes#show', user_id: @user.id.to_s, id: @recipe.id.to_s)
     end
 
     it 'routes to #edit' do
-      expect(get: '/recipes/1/edit').to route_to('recipes#edit', id: '1')
+      expect(get: "#{edit_user_recipe_path(@user, @recipe)}").to route_to('recipes#edit', user_id: @user.id.to_s, id: @recipe.id.to_s)
     end
 
     it 'routes to #create' do
-      expect(post: '/recipes').to route_to('recipes#create')
-    end
-
-    it 'routes to #update via PUT' do
-      expect(put: '/recipes/1').to route_to('recipes#update', id: '1')
-    end
-
-    it 'routes to #update via PATCH' do
-      expect(patch: '/recipes/1').to route_to('recipes#update', id: '1')
+      expect(post: "#{user_recipes_path(@user)}").to route_to('recipes#create', user_id: @user.id.to_s)
     end
 
     it 'routes to #destroy' do
-      expect(delete: '/recipes/1').to route_to('recipes#destroy', id: '1')
+      expect(delete: "#{user_recipe_path(@user, @recipe)}").to route_to('recipes#destroy', user_id: @user.id.to_s, id: @recipe.id.to_s)
     end
   end
 end
