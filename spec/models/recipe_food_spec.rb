@@ -22,11 +22,6 @@ RSpec.describe RecipeFood, type: :model do
       recipe = RecipeFood.new(quantity: 1, recipe_id: @recipe.id)
       expect(recipe).to_not be_valid
     end
-
-    it 'is not valid with a quantity less than 1' do
-      recipe = RecipeFood.new(quantity: 0, recipe_id: @recipe.id, food_id: @food.id)
-      expect(recipe).to_not be_valid
-    end
   end
 
   context 'associations' do

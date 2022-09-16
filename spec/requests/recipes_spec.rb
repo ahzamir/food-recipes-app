@@ -5,7 +5,8 @@ RSpec.describe 'Recipes List Page', type: :request do
     include Devise::Test::IntegrationHelpers
     before do
       @user = User.create(name: 'Huseyin', password: '123456', email: 'hb@gmail.com')
-      @recipe = Recipe.create(name: 'Apples', preparation_time: '1 hour', cooking_time: '1:30', description: 'Lorem ipsum', public: false, user_id: @user.id)
+      @recipe = Recipe.create(name: 'Apples', preparation_time: '1 hour', cooking_time: '1:30',
+                              description: 'Lorem ipsum', public: false, user_id: @user.id)
       sign_in @user
     end
     it 'is a HTTP success' do
