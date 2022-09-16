@@ -49,9 +49,11 @@
           <td>
             <%= food.quantity %>
           </td>
-          <td>
-            <%= button_to "Delete", food, method: :delete %>
-          </td>
+          <% if can? :manage, food %>
+            <td>
+              <%= button_to "Delete", food, method: :delete %>
+            </td>
+          <% end %>
         </tr>
       <% end %>
     </table>
