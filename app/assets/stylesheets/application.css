@@ -39,7 +39,7 @@ header {
   padding: 30px;
   border-bottom: 1px solid rgb(172, 226, 186);
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0px rgb(172, 226, 186)
+  box-shadow: 0 0 10px 0 rgb(172, 226, 186);
 }
 
 .logo {
