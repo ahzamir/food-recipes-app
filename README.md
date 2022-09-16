@@ -92,7 +92,7 @@ $ gem install rails
 ```
 ## Authors
 
-👤 **Mavericks Balitaan** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
+👤 **Ahmad Zamir Yousufi** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [@ahzamir](https://github.com/ahzamir).
 - Twitter: [@YousufiZamir](https://twitter.com/YousufiZamir)
