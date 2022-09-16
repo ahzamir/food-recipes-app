@@ -1,53 +1,98 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+## Food Recipes App
 
-> Description the project.
+> The Food Recipes App keeps track of all your recipes, ingredients. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.
 
+## Schema
+![](https://github.com/microverseinc/curriculum-rails/blob/main/recipe-app/images/recipe_erd_2_members.png)
 
-## Built With 
+## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available) 💻
-
-[Live Demo Link](https://livedemo.com)
-
+- [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
+- [x] Framework: [Ruby on Rails](https://rubyonrails.org/)
+- [x] Linter: [Rubocop](https://rubocop.org/)
+- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
+- [x] Database: [PostgreSQL](https://www.postgresql.org/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-You must have a browser on your device, visual code, a git version, [node.js](https://nodejs.org/en/) installed in your device and clone the repo from GitHub and follow the steps below.
-
-### Setup
-
-Clone the repository from GitHub, open the project folder, inside the project direcory open the commanline or Terminal and install the dependicies.
 
 ### Install
 
-inside the project direcory open the commanline or Terminal, run npm install to install all the dependicies.
+In the terminal, go to your file directory and run this command.
+
+```
+$ git clone https://github.com/ahzamir/food-recipes-app.git
+```
 
 ### Usage
 
-To use this project or app run npm start in the project directory and you will see the live serever open on youe browser.
+```
+$ cd blog-app
+```
+```
+rails server
+```
+
+### Setup
+
+```
+bundle install
+```
+```
+rubocop .
+```
 
 ### Run tests
 
-For running tests inside the project directory run npm test in command line or Terminal.
+To install rspec, in the terminal kindly run this command
 
-### Deployment
+```
+$ gem install rspec
+```
 
+To run tests, please run this command
+```
+$ rspec ./spec/#{filename}_spec.rb
+```
 
+### API Documentation
+
+Ypu can find the API documentation by:
+
+```
+$ rails server
+```
+
+Then go to this link: [http://localhost:3000/api-docs/index.html](http://localhost:3000/api-docs/index.html)
+
+### Prerequisites
+
+- [x] A web browser like [Google Chrome](https://www.google.com/chrome/).
+- [x] A code editor like [Visual Studio Code](https://code.visualstudio.com/).
+- [x] A terminal to run the code.
+- [x] [Ruby](https://www.ruby-lang.org/en/) installed on your computer.
+- [x] [Rails](https://rubyonrails.org/) installed on your computer.
+
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
+
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
+
+To install rails, in the terminal kindly run this command
+```
+$ gem install rails
+```
 ## Authors
+
+👤 **Mavericks Balitaan** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [@ahzamir](https://github.com/ahzamir).
 - Twitter: [@YousufiZamir](https://twitter.com/YousufiZamir)
@@ -57,7 +102,7 @@ For running tests inside the project directory run npm test in command line or T
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/ahzamir/food-recipes-app/issues).
 
 ## Show your support
 
@@ -65,10 +110,12 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers
+- Coding Partners
 
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+![](https://img.shields.io/badge/Microverse-blueviolet)

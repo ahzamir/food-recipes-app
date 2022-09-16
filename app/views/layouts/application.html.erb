@@ -11,25 +11,33 @@
 
   <body>
     <header>
-      <div class="logo">RecipeApp</div>
-    <div class="elements">
-    <% if user_signed_in? %>
-      <button><%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %></button>
-      <button><%= link_to  "Recipes List",  user_recipes_path(current_user.id) ,class:"decoration"%></button>
-      <button> <%= link_to  "Food List", foods_url,class:"decoration" %></button>
-      <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
-    <% else %>
-      <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
-      <button><%= link_to "Login in", new_user_session_path,class:"decoration" %></button>
-      <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
-    <% end %>
+      <div class="logo">
+        RecipeApp
+      </div>
+      <div class="elements">
+        <% if user_signed_in? %>
+          <button><%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %></button>
+          <button><%= link_to  "Recipes List",  user_recipes_path(current_user.id) ,class:"decoration"%></button>
+          <button> <%= link_to  "Food List", foods_url,class:"decoration" %></button>
+          <button> <%= link_to  "Shopping List", shopping_list_index_path	,class:"decoration" %></button>
+          <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
+          <button> <%= link_to "Add Recipe", new_user_recipe_path(user_id: current_user.id),class:"decoration" %></button>
+          <button> <%= link_to "Add Food", new_food_path,class:"decoration" %></button>
+        <% else %>
+          <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
+          <button><%= link_to "Login in", new_user_session_path,class:"decoration" %></button>
+          <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
+        <% end %>
+      </div>
     </header>
-        <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
-    <%= yield %>
+    <div class="main-wrapper">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

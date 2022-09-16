@@ -1,17 +1,24 @@
+.food-info {
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
 td,
 th {
-  border: 1px solid rgb(157, 157, 157);
+  border: 1px solid rgb(172, 226, 186);
+  border-radius: 10px;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #ddd;
+  background-color: #02272e70;
+  color: #fff;
 }

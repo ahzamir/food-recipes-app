@@ -1,29 +1,32 @@
 <div id="<%= dom_id recipe %>">
-    <h1>
-        <%= recipe.name %>
-    </h1>
-    <label class="switch">
-        <% if recipe.public %>
-            <input type="checkbox" checked>
-        <% else %>
-            <input type="checkbox">
-        <% end %>
-        <span class="slider round"></span>
-    </label>
+  <h1>
+    <%= recipe.name %>
+  </h1>
+  <div class="recipe-detail-info">
+    <p>
+    <strong>Preparation time:</strong>
+    <%= recipe.preparation_time %>
+  </p>
 
-    <p>
-        Recipe by: <%= recipe.user.name %>
-    </p>
-    <p>
-        Recipe Description: <%= recipe.description %>
-    </p>
-    <p>
-        Recipe Prepration Time: <%= recipe.prepration_time %>
-    </p>
-    <p>
-        Recipe Cooking Time: <%= recipe.cooking_time %>
-    </p>
-    <p>
-        public: <%= recipe.public %>
-    </p>
+<p class="switch-text">Public
+  <label class="switch">
+  <% if recipe.public == true  %>
+  <input type="checkbox" checked>
+  <%end%>
+  <span class="slider round"></span>
+</label>
+</p>
+  </div>
+
+
+  <p>
+    <strong>Cooking time:</strong>
+    <%= recipe.cooking_time %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= recipe.description %>
+  </p>
+
 </div>

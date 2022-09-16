@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Recipe foods</h1>
+<h2>Recipe foods</h2>
 
 <div id="recipe_foods">
   <% @recipe_foods.each do |recipe_food| %>
@@ -8,4 +8,4 @@
   <% end %>
 </div>
 
-<%= link_to "New recipe food", new_recipe_recipe_food_path %>
+<%= link_to "New recipe food", new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
