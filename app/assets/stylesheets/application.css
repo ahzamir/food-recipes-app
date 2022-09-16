@@ -93,3 +93,22 @@ a:hover {
   border: 1px solid rgb(172, 226, 186);
   border-radius: 5px;
 }
+
+.content-buttons {
+  margin: 1.5rem 0;
+}
+
+.content-buttons a {
+  border: rgb(172, 226, 186) 2px solid;
+  border-radius: 5px;
+}
+
+.content-buttons a:hover {
+  background-color: #fff;
+  border:rgb(172, 226, 186) 2px solid;
+  color: #02272e;
+}
+
+.content-buttons button {
+  margin: 1rem 0;
+}

@@ -1,8 +1,10 @@
+<%= stylesheet_link_tag "user.css" %>
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @user %>
 
-<div>
+<div class="user-info-button">
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
 

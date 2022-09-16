@@ -1,11 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<h2>Users</h2>
+<h2 class="users-page-header">Users</h2>
 
 <div id="users">
   <% @users.each do |user| %>
     <%= render user %>
-    <p>
+    <p class="show-user">
       <%= link_to "Show this user", user %>
     </p>
   <% end %>
