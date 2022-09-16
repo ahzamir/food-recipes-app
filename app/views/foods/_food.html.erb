@@ -1,0 +1,56 @@
+<div class="food-info" id="<%= dom_id food %>">
+  <table>
+    <th>
+      <p>
+        <strong>Name</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+        <strong>Measurement_unit</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+        <strong>Price</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+        <strong>Quantity</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+        <strong>Action</strong>
+      </p>
+    </th>
+    <tr>
+      <td>
+        <p>
+          <%= food.name %>
+        </p>
+      </td>
+      <td>
+        <p>
+          <%= food.measurement_unit %>
+        </p>
+      </td>
+      <td>
+        <p>
+          <%= food.price %>
+        </p>
+      </td>
+      <td>
+        <p>
+          <%= food.quantity %>
+        </p>
+      </td>
+      <td>
+        <p>
+          <%= button_to "Delete", food, method: :delete, data: { confirm: "Are you sure?" } %>
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
