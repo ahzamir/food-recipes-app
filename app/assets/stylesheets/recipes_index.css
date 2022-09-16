@@ -34,7 +34,6 @@ h1 {
 .recipes-title {
   text-decoration: none;
   font-size: 23px;
-  color: black;
 }
 
 .recipe-informations {
@@ -43,8 +42,12 @@ h1 {
   margin-left: 19px;
 }
 
+.recipe-informations button {
+  margin: 1rem 0;
+}
+
 span {
-  color: #000;
+  color: #fff;
 }
 
 .price {
