@@ -6,7 +6,7 @@ RSpec.describe Recipe, type: :model do
   end
   context 'validations' do
     it 'is valid with valid attributes' do
-      recipe = Recipe.new(name: 'Apples', preparation_time: '1 hour', cooking_time: '30 minutes',
+      recipe = Recipe.new(name: 'Apples', preparation_time: '1 hour', cooking_time: '1:30',
                           description: 'Lorem ipsum', public: false, user_id: @user.id)
       expect(recipe).to be_valid
     end
