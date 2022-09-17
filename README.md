@@ -33,16 +33,16 @@ $ git clone https://github.com/ahzamir/food-recipes-app.git
 $ cd blog-app
 ```
 ```
-rails server
+$ rails server
 ```
 
 ### Setup
 
 ```
-bundle install
+$ bundle install
 ```
 ```
-rubocop .
+$ rubocop .
 ```
 
 ### Run tests
