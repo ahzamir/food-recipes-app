@@ -79,3 +79,7 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'jwt', '~> 2.4'
+
+gem 'sassc-rails'
+
+gem 'bootstrap', '~> 5.1.3'
