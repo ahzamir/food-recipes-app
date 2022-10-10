@@ -14,9 +14,18 @@
   padding: 0;
 }
 
+:root {
+  --main-color: #9771d8;
+  --light-color: #c6a9f9;
+  --second-color: #63ca9a;
+  --primary-color: #eeecf7;
+  --secondary-color: #fff;
+}
+
 body {
-  background-color: #03404c;
-  color: #fff;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
 }
 
 .main-wrapper {
