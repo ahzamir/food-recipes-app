@@ -24,7 +24,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
@@ -37,12 +37,9 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: #02272e;
+  background-color: var(--main-color);
   gap: 120px;
   padding: 30px;
-  border-bottom: 1px solid rgb(172, 226, 186);
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgb(172, 226, 186);
 }
 
 .logo {
