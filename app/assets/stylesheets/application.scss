@@ -20,12 +20,13 @@
   --second-color: #63ca9a;
   --primary-color: #eeecf7;
   --secondary-color: #fff;
+  --dark-color: #02272e;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--dark-color);
 }
 
 .main-wrapper {
@@ -34,25 +35,13 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   background-color: var(--main-color);
   gap: 120px;
   padding: 30px;
-}
-
-.logo {
-  font-size: 2rem;
-  color: #fff;
-  margin-left: 9px;
-  font-weight: bold;
+  color: var(--dark-color);
 }
 
 .elements {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
   gap: 1rem;
   margin-top: 2px;
 }
