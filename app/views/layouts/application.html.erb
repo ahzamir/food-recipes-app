@@ -15,25 +15,33 @@
   </head>
 
   <body>
-    <header class="d-flex justify-content-between align-items-center p-3">
-      <div class="text-white text-2xl font-bold">
+    <header class="d-flex justify-content-between align-items-center">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <% if user_signed_in? %>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to  "Recipes List",  user_recipes_path(current_user.id) %></li>
+              <li> <%= link_to  "Food List", foods_url %></li>
+              <li> <%= link_to  "Shopping List", shopping_list_index_path	 %></li>
+              <li> <%= link_to "Public Recipes", recipes_index_path %></li>
+              <li> <%= link_to "Add Recipe", new_user_recipe_path(user_id: current_user.id) %></li>
+              <li> <%= link_to "Add Food", new_food_path %></li>
+            <% else %>
+              <li><%= link_to  "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login in", new_user_session_path %></li>
+              <li> <%= link_to "Public Recipes", recipes_index_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="text-center">
         RecipeApp
-      </div>
-      <div class="d-flex">
-        <% if user_signed_in? %>
-          <button><%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %></button>
-          <button><%= link_to  "Recipes List",  user_recipes_path(current_user.id) ,class:"decoration"%></button>
-          <button> <%= link_to  "Food List", foods_url,class:"decoration" %></button>
-          <button> <%= link_to  "Shopping List", shopping_list_index_path	,class:"decoration" %></button>
-          <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
-          <button> <%= link_to "Add Recipe", new_user_recipe_path(user_id: current_user.id),class:"decoration" %></button>
-          <button> <%= link_to "Add Food", new_food_path,class:"decoration" %></button>
-        <% else %>
-          <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
-          <button><%= link_to "Login in", new_user_session_path,class:"decoration" %></button>
-          <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
-        <% end %>
-      </div>
+      </h1>
     </header>
     <div class="main-wrapper">
       <% if notice %>
