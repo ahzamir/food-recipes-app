@@ -30,8 +30,8 @@ body {
 }
 
 .main-wrapper {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 3rem;
 }
 
 header {
@@ -208,4 +208,10 @@ a {
 
 .content-buttons button {
   margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper {
+    padding: 0 1rem;
+  }
 }
