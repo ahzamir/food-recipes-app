@@ -57,6 +57,23 @@ header h1 {
   user-select: none;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+.content-buttons a {
+  border: rgb(172, 226, 186) 2px solid;
+  border-radius: 5px;
+}
+
+.content-buttons a:hover {
+  background-color: #fff;
+  border: rgb(172, 226, 186) 2px solid;
+  color: #02272e;
+}
+
 #menuToggle a {
   text-decoration: none;
   color: var(--primary-color);
@@ -182,32 +199,8 @@ button:hover {
   color: black;
 }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-  padding: 10px;
-}
-
 .content-buttons {
   margin: 1.5rem 0;
-}
-
-.content-buttons a {
-  border: rgb(172, 226, 186) 2px solid;
-  border-radius: 5px;
-}
-
-.content-buttons a:hover {
-  background-color: #fff;
-  border: rgb(172, 226, 186) 2px solid;
-  color: #02272e;
 }
 
 .content-buttons button {
