@@ -1,17 +1,22 @@
 <!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<html lang="<%= I18n.locale %>">
 <html>
   <head>
     <title>RecipeApp</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <header>
-      <div class="logo">
+      <div class="text-dark border">
         RecipeApp
       </div>
       <div class="elements">
